@@ -7,7 +7,7 @@ from os import scandir
 from builtins import print as def_print
 
 # Base Qt imports (to be commented)
-from PySide6 import Qt, QtCore, QtWidgets, QtGui
+from PySide6 import QtCore, QtWidgets, QtGui
 # Selective QtImports
 from PySide6.QtGui      import QImage, QPixmap, QImageReader, QContextMenuEvent, QAction, QMouseEvent, QWindow
 from PySide6.QtWidgets  import QWidget, QLabel, QStatusBar, QMainWindow, QApplication, QMenu, QLineEdit, QGridLayout, QGroupBox, QSpinBox, QCheckBox, QPushButton, QSizePolicy, QFileDialog
@@ -88,7 +88,6 @@ class WorkerSignals(QObject):
     dataReady   = Signal(object)
 
 class MediaHandler(QRunnable):
-
     def __init__(self, path: str, bulked: bool = False, randomized: bool = False, mainThread: bool = True):
         super().__init__()
         self.path               = path
